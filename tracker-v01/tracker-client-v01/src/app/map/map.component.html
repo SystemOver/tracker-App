@@ -1,0 +1,13 @@
+<p>map works!</p>
+
+<div id="map" style="width: 800px; height: 600px;"></div>
+
+<input type="button" (click)="SaveCurrent()" value="Save current Location"> <p>{{latLngNew}}</p>
+
+<h2>Saved Locations</h2>
+<ul>
+  <li *ngFor="let location of locationList">
+    <p>Latitude: {{ location.latlng }}</p>
+    <p>Timestamp: {{ location.timestamp | date:'short' }}</p>
+  </li>
+</ul>
